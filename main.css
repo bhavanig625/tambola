@@ -1,0 +1,48 @@
+body{
+    /* background-color: rgb(235, 235, 192); */
+}
+.title{
+    text-align: center;
+}
+.btn-generate{
+    background-color: rgba(50, 179, 73, 0.886);
+    height: 35px;
+    text-decoration: solid;
+    font-weight: bold;
+    align-items: center;
+}
+.hero-section{
+    text-align: center;
+    margin: 15px;
+}
+.board-container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;    
+    flex-wrap: wrap;
+    margin:35px;
+    width:70%;
+}
+.box{
+    width:70px;
+    height:70px;
+    color:white;
+    background-color: rgb(180, 77, 97);
+    border: 1px black solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 25px;
+}
+.generated{
+    background-color: rgb(76, 138, 236);
+    font-weight: bold;
+}
+.current{
+    background-color: rgb(19, 154, 82);
+    font-weight: bold;
+    font-size: 45px;
+}
