@@ -10,19 +10,49 @@
   </head>
   <body>
     <div class="hero-section">
-      <h1 class="title">Let's Play <strong>Tambola</strong></h1>
-      <input
-        type="button"
-        class="btn-generate"
-        value="Generate"
-        onclick="generateNum()"
-      />
-      <input
-        type="button"
-        class="btn-generate"
-        value="Auto Generate"
-        onclick="autoGenerateNum()"
-      />
+      <div class="left-section">
+        <h1 class="title">Let's Play <strong>Tambola</strong></h1>
+        <input
+          type="button"
+          class="btn-generate"
+          value="Generate"
+          onclick="generateNum()"
+        />
+        <input
+          type="button"
+          class="btn-generate"
+          value="Auto Generate"
+          onclick="autoGenerateNum()"
+        />
+      </div>
+      <div class="show-num" id="show-num">66</div>
+      <div class="pace-section" id="pace-section">
+        <input
+          type="button"
+          class="btn-pace"
+          value="Slow"
+          onclick="slowGenerator()"
+        />
+        <input
+          type="button"
+          class="btn-pace"
+          value="Medium"
+          onclick="mediumGenerator()"
+        />
+        <input
+          type="button"
+          class="btn-pace"
+          value="Fast"
+          onclick="fastGenerator()"
+        />
+      </div>
+    </div>
+    <div class="play-section" id="play-pause">
+      <div class="btn-tambola" onclick="pause()">Pause</div>
+      <div class="btn-tambola" onclick="play()">Play</div>
+      <div class="btn-tambola" onclick="reset()">Reset</div>
+      <div class="btn-tambola" onclick="mute()">Mute</div>
+      <div class="btn-tambola" onclick="unmute()">Play Sound</div>
     </div>
     <div class="board-container" id="tambola-board"></div>
   </body>

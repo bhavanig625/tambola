@@ -1,0 +1,25 @@
+Fix auto generate multiple times click
+Show either play/pause
+Show either mute/unmute
+When click on reset, show a promt to confirm it.
+Fix current number UX
+Fix pace selection UX
+refresh support
+Board UX
+    Remove background circle for current number
+responsiveness
+Add capability to Select voice
+Add telugu language voice capability
+
+
+
+Completed features
+Random logic
+Highlight
+Voice out
+Pace selection
+Pause/play
+Mute/unmute
+Auto generate
+Manual generate
+
