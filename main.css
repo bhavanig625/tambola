@@ -1,5 +1,8 @@
 body{
-    /* background-color: rgb(235, 235, 192); */
+    font-family: 'Roboto', sans-serif;
+}
+.tambola-game{
+    margin:auto;
 }
 .title{
     text-align: center;
@@ -11,40 +14,38 @@ body{
     font-weight: bold;
     align-items: center;
 }
+
+.btn-section{
+    display: flex;
+    gap: 5px;
+}
 .hero-section{
-    text-align: center;
     margin: 15px;
     display: flex;
-    justify-content: center;
-    margin-top: 15px;;
+    flex-direction: column;
 }
 .board-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    font-size: 25px;
     justify-content:center;
-    align-items: center;
-    gap: 20px;    
-    flex-wrap: wrap;
+    gap: 5px;    
     margin:auto;
 }
 .box{
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
+    display: inline-grid;
     justify-content: center;
-    flex-wrap: wrap;
-    font-size: 30px;
+    border: 1px solid #c3c3c3;
+    align-items: center;
 }
 .generated{
     color: rgb(76, 138, 236);
     font-weight: bold;
 }
 .current{
-    background-color: rgb(19, 154, 82);
+    background-color: #58b0a1;
     font-weight: bold;
-    font-size: 45px;
-}
-.pace-section{
-    display: none;
+    color: white;
 }
 .play-section{
     display: none;
@@ -54,27 +55,93 @@ body{
 }
 .show-num{
     font-size: 60px;
-    align-items:center;
-    justify-content:center;
     color: rgb(32, 156, 18);
-    display: none;
-    right: 0;
-    position: absolute;
-    margin-right: 30px;
-    align-self: center;
+    visibility: hidden;
+    justify-content: center;
+    margin-top:10px;
+    display: flex;
+    height: 70px;
+}
+
+.sub-title{
+    display: flex;
+    justify-content: center;
 }
 .btn-tambola{
     margin: auto;
     width: fit-content;
-    padding:10px;
+    padding: 10px;
+    background-color: #eae2d4;
+    border: 1px solid #7e7462;
+    border-radius: 4px;
 }
 
-/* body {
-    background-color: aqua;
-} */
+#resume-restart, #play-btns, #play, #unmute, #pace-section, #manual-reset{
+    display: none;
+}
 
-@media (max-width: 400px) {
-    /* body {
-        background-color: brown;
-    } */
+#play-btns{
+    gap: 20px;
+}
+
+.icon{
+    font-size: 40px !important;
+    color: #36A9AE;
+    cursor: pointer;
+}
+
+.button {
+    background-color: #36A9AE;
+    background-image: linear-gradient(#37ADB2, #329CA0);
+    border: 1px solid #2A8387;
+    border-radius: 4px;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 17px;
+    line-height: 100%;
+    padding: 11px 15px 12px;
+    text-align: center;
+    transition: box-shadow .05s ease-in-out,opacity .05s ease-in-out;
+  }
+  
+  .button:hover {
+    box-shadow: rgba(255, 255, 255, 0.3) 0 0 2px inset, rgba(0, 0, 0, 0.4) 0 1px 2px;
+    text-decoration: none;
+    transition-duration: .15s, .15s;
+  }
+  
+  .button:active {
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
+  }
+  
+  .button:disabled {
+    cursor: not-allowed;
+    opacity: .6;
+  }
+  
+  .button:disabled:active {
+    pointer-events: none;
+  }
+  
+  .button:disabled:hover {
+    box-shadow: none;
+  }
+
+@media (max-width: 500px) {
+    .box{
+        padding:5px;     
+    }
+    .board-container{
+        row-gap: 15px;
+        column-gap: 3px;
+        margin:auto 20px;
+        font-size: 18px;;
+    }
+}
+@media(min-width:500px){
+    .tambola-game{
+        max-width:600px;
+    }
 }
