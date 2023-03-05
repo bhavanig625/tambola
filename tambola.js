@@ -64,15 +64,15 @@ function restart() {
   sessionStorage.removeItem("lastTimeInterval");
 }
 
-window.onbeforeunload = () => {
-  pause();
-  sessionStorage.setItem("lastIndex", current);
-  sessionStorage.setItem("randomList", randList);
-  sessionStorage.setItem("lastTimeInterval", timeInterval);
-  document.getElementById("resume-restart").style.display = "block";
-  document.getElementById("play-btns").style.display = "none";
-  return false;
-};
+// window.onbeforeunload = () => {
+//   pause();
+//   sessionStorage.setItem("lastIndex", current);
+//   sessionStorage.setItem("randomList", randList);
+//   sessionStorage.setItem("lastTimeInterval", timeInterval);
+//   document.getElementById("resume-restart").style.display = "block";
+//   document.getElementById("play-btns").style.display = "none";
+//   return false;
+// };
 
 function announceText(text) {
   if (isMute != 1) {
