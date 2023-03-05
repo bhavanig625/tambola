@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf  dist",
-    "start": "npm run clean && parcel src/index.html",
-    "build": "npm run clean && parcel build src/index.html"
+    "start": "npm run clean && parcel index.html",
+    "build": "npm run clean && parcel build index.html"
   },
   "author": "",
   "license": "ISC",
