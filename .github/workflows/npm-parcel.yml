@@ -21,6 +21,12 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+    
+    - name: Build
+      run: |
+        npm install
+        npm run build
+        
     - name: Archive production artifacts
       uses: actions/upload-artifact@v3
       with:
@@ -28,7 +34,3 @@ jobs:
           path: |
             dist
             !dist/**/*.md
-    - name: Build
-      run: |
-        npm install
-        npm run build
