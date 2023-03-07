@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "clean": "rimraf docs",
-    "build": "npm run clean && parcel build index.html --dist-dir docs && copyfiles CNAME docs"
+    "build": "npm run clean && parcel build index.html --no-source-maps --dist-dir docs && copyfiles CNAME docs"
   },
   "author": "",
   "license": "ISC",
