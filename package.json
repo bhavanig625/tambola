@@ -4,9 +4,9 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rimraf  dist",
-    "start": "npm run clean && parcel index.html",
-    "build": "npm run clean && parcel build index.html"
+    "clean": "rimraf  docs",
+    "start": "npm run clean && parcel index.html --dist-dir docs",
+    "build": "npm run clean && parcel build index.html  --dist-dir docs"
   },
   "author": "",
   "license": "ISC",
