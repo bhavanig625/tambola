@@ -1,0 +1,6 @@
+{
+  mangle: {
+    keep_fnames: false,
+    toplevel: true
+  }
+}
