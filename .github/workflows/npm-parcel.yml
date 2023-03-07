@@ -32,10 +32,8 @@ jobs:
         git config --global user.name "GitHub Actions"
         git add dist
         git commit -m "Add dist folder"
-      env:
-        username: mygithubactionsaccount
     - name: Push changes
       uses: ad-m/github-push-action@v0.6.0
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.TAMBOLAWORKFLOWACTIONSECRET }}
     
