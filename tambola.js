@@ -156,7 +156,7 @@ function speedup() {
     pace += 1;
     clearInterval(intervalID);
     setTimeInterval(pace);
-    if (play) {
+    if (playflag) {
       intervalID = setInterval(getNext, timeInterval);
     }
   }
@@ -167,7 +167,7 @@ function slowdown() {
     pace -= 1;
     clearInterval(intervalID);
     setTimeInterval(pace);
-    if (play) {
+    if (playflag) {
       intervalID = setInterval(getNext, timeInterval);
     }
   }
