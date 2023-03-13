@@ -18,6 +18,7 @@ var generateSection = document.getElementById("generate");
 var pace;
 var speedupButton = document.getElementById("speedup");
 var slowdownButton = document.getElementById("slowdown");
+var playflag;
 
 window.onload = displayBoard;
 function displayBoard() {
@@ -64,15 +65,15 @@ function restart() {
   sessionStorage.removeItem("lastTimeInterval");
 }
 
-// window.onbeforeunload = () => {
-//   pause();
-//   sessionStorage.setItem("lastIndex", current);
-//   sessionStorage.setItem("randomList", randList);
-//   sessionStorage.setItem("lastTimeInterval", timeInterval);
-//   document.getElementById("resume-restart").style.display = "block";
-//   document.getElementById("play-btns").style.display = "none";
-//   return false;
-// };
+window.onbeforeunload = () => {
+  pause();
+  sessionStorage.setItem("lastIndex", current);
+  sessionStorage.setItem("randomList", randList);
+  sessionStorage.setItem("lastTimeInterval", timeInterval);
+  document.getElementById("resume-restart").style.display = "block";
+  document.getElementById("play-btns").style.display = "none";
+  return false;
+};
 
 function announceText(text) {
   if (isMute != 1) {
@@ -155,8 +156,9 @@ function speedup() {
     pace += 1;
     clearInterval(intervalID);
     setTimeInterval(pace);
-    intervalID = setInterval(getNext, timeInterval);
-    console.log(timeInterval);
+    if (play) {
+      intervalID = setInterval(getNext, timeInterval);
+    }
   }
 }
 
@@ -165,8 +167,9 @@ function slowdown() {
     pace -= 1;
     clearInterval(intervalID);
     setTimeInterval(pace);
-    intervalID = setInterval(getNext, timeInterval);
-    console.log(timeInterval);
+    if (play) {
+      intervalID = setInterval(getNext, timeInterval);
+    }
   }
 }
 
@@ -177,12 +180,14 @@ function toggle() {
 }
 
 function play() {
+  playflag = 1;
   intervalID = setInterval(getNext, timeInterval);
   pauseButton.style.display = "inline-block";
   playButton.style.display = "none";
 }
 
 function pause() {
+  playflag = 0;
   clearInterval(intervalID);
   pauseButton.style.display = "none";
   playButton.style.display = "inline-block";
